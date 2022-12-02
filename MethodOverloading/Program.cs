@@ -18,16 +18,20 @@ namespace MethodOverloading
             {
                 return $"{int1 + int2} dollars";
             }
-            else 
+            else if (bool1 == true && int1 + int2 == 1)
             {
                 return $"{int1 + int2} dollar";
+            }
+            else
+            {
+                return $"{int1 + int2}";
             }
         }
         static void Main()
         {
             Add(12, 3);
             Add(1.23m, 4.56m);
-            Console.WriteLine(Add(1, 23, true));
+            Console.WriteLine(Add(1, 23, false));
         }
     }
 }
